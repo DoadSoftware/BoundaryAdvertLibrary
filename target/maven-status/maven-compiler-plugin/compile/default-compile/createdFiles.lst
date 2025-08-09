@@ -1,0 +1,10 @@
+com\boundaryadvert\dao\impl\BoundaryAdvertDaoImpl.class
+com\boundaryadvert\util\BoundaryAdvertUtil.class
+com\boundaryadvert\util\BoundaryAdvertFunctions.class
+com\boundaryadvert\util\BoundaryAdvertFunctions$1.class
+com\boundaryadvert\model\Matrix.class
+com\boundaryadvert\dao\BoundaryAdvertDao.class
+com\boundaryadvert\model\Configurations.class
+com\boundaryadvert\service\impl\BoundaryAdvertServiceImpl.class
+com\boundaryadvert\model\Container.class
+com\boundaryadvert\service\BoundaryAdvertService.class
