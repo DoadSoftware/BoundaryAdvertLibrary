@@ -41,9 +41,11 @@ public class BoundaryAdvertFunctions {
 			List<Container> containerList = new ArrayList<Container>();
 
 			for (Matrix matrix : matrices) {
-				containerList = Arrays.asList(matrix.getContainerOne(),matrix.getContainerTwo());
+				
+				containerList = Arrays.asList(matrix.getContainerOne(),matrix.getContainerTwo(),matrix.getContainerThree());
 				System.out.println("convertDataToDesigCode: containerList.size = " + containerList.size());
-	            for (Container container : containerList) {
+	            
+				for (Container container : containerList) {
 	            	
 					txtToReturn = txtToReturn + "#REC^" + container.getWidth() 
 						+ "^" + matrix.getContainerOne().getHeight();
@@ -57,10 +59,9 @@ public class BoundaryAdvertFunctions {
 						txtToReturn = txtToReturn + "^" + "V";
 						break;
 					}
-					txtToReturn = txtToReturn + "^" + "ROW_" + matrix.getMatrixId() + "_COLUMN_" 
-						+ container.getContainerId();
+					txtToReturn = txtToReturn + "^" + "ROW_" + matrix.getMatrixId() + "_COLUMN_" + container.getContainerId();
 					switch (container.getDataType().toUpperCase()) {
-					case BoundaryAdvertUtil.VIDEO:
+ 					case BoundaryAdvertUtil.VIDEO:
 					case BoundaryAdvertUtil.IMAGE:
 						txtToReturn = txtToReturn + "^" + container.getDataPath();
 						break;
@@ -68,8 +69,9 @@ public class BoundaryAdvertFunctions {
 						txtToReturn = txtToReturn + "^" + BoundaryAdvertUtil.EMPTY;
 						break;
 					}
+					System.out.println("ROW_" + matrix.getMatrixId() + "_COLUMN_" + container.getContainerId() + " container = " + container);
 				}
-				txtToReturn = txtToReturn + ";";
+				txtToReturn = txtToReturn + System.lineSeparator();
 			}
 			break;
 		}
