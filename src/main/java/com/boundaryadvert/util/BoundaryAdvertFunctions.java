@@ -71,7 +71,8 @@ public class BoundaryAdvertFunctions {
 					}
 					System.out.println("ROW_" + matrix.getMatrixId() + "_COLUMN_" + container.getContainerId() + " container = " + container);
 				}
-				txtToReturn = txtToReturn + System.lineSeparator();
+				//txtToReturn = txtToReturn + System.lineSeparator();
+				txtToReturn += "$";
 			}
 			break;
 		}
